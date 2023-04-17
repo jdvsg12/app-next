@@ -1,0 +1,119 @@
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: #F2E0BD;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.nav img {
+    margin: 1rem;
+}
+
+.text {
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.text li {
+    color: #3E2014;
+    font-size: 20px;
+    font-weight: 700;
+    transition: 0.3s;
+    transform: translateY(1px);
+}
+
+.text li:hover {
+    transform: translateY(-2px);
+    color: #3e201496;
+}
+
+.navToggler {
+    margin: 1rem;
+    display: none;
+}
+
+.navToggler div {
+    width: 2rem;
+    height: 0.3rem;
+    margin: 0.4rem;
+    background: #3E2014;
+    transition: 0.3s ease-in;
+}
+
+@media (max-width: 700px) {
+
+    .text {
+        display: none;
+    }
+
+    .navToggler {
+        display: block;
+        cursor: pointer;
+        z-index: 9999;
+    }
+
+    .navMenu {
+        position: fixed;
+        top: 0px;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 95%;
+        gap: 0.5rem;
+        background: #F2E0BD;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: 0.5s ease-in;
+        padding: 4rem 0rem;
+        z-index: 0;
+    }
+
+    .navMenu li {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        height: 25%;
+        color: #3E2014;
+        align-items:center;
+        font-weight: 700;
+    }
+
+    .navMenu,
+    .navActive {
+        transform: translateX(0%);
+    }
+
+    .toggle div {
+        width: 2rem;
+        height: 0.3rem;
+        margin: 0.4rem;
+        background: #3E2014;
+        transition: 0.3s ease-in;
+    }
+
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-20px, -4px);
+    }
+
+    .toggle .line2 {
+        opacity: 0;
+    }
+
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-20px, 4px);
+    }
+}
+
+@media (max-width: 340px) {
+
+    .nav img {
+        width: 180px;
+    }
+}
