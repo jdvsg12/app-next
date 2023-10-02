@@ -3,7 +3,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Keyboard, Navigation, Pagination } from "swiper";
 import useSWR from 'swr';
 import "swiper/css/navigation";
-import "swiper/css/pagination";
 import "swiper/css";
 
 
@@ -19,10 +18,9 @@ function Banner() {
 
     return (
         <Swiper
-            modules={[Navigation, Keyboard, Autoplay, Pagination]}
+            modules={[Navigation, Keyboard, Autoplay]}
             className="mySwiper"
             navigation={true}
-            pagination={true}
             keyboard={true}
             autoplay={{ delay: 2000 }}
             loop={true}>

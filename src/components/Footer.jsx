@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import useSWR from 'swr';
 import { Roboto } from 'next/font/google';
-import styles from '@/styles/Footer.module.css';
+import styles from '@/styles/Footer.module.scss';
 
 const roboto = Roboto({ subsets: ['latin'], weight: ['300', '500'] })
 

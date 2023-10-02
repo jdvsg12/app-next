@@ -1,11 +1,11 @@
 const navData = [
     {
         title: 'Inicio',
-        rute: '/index'
+        rute: '/'
     },
     {
-        title: 'Nosotros',
-        rute: '/nosotros'
+        title: 'Atención',
+        rute: '/atencion'
     },
     {
         title: 'Blog',

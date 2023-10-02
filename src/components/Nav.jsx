@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import useSWR from 'swr'
 import { Alegreya } from 'next/font/google'
-import styles from '@/styles/Nav.module.css'
+import styles from '@/styles/Nav.module.scss'
 import { useState } from 'react'
 
 const alegreya = Alegreya({ subsets: ['latin'], weight: ['400', '500'] })
@@ -38,7 +38,7 @@ function Nav() {
             <ul className={styles[active]}>
                 {data.map(({ title, rute }, index) => (
                     <li key={`${title}--${index}`}>
-                        <Link className={alegreya.className} href={rute} target="_blank" rel="noopener noreferrer">
+                        <Link className={alegreya.className} href={rute} rel="noopener noreferrer">
                             {title}
                         </Link>
                     </li>
